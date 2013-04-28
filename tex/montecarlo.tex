@@ -1,0 +1,122 @@
+%%%%%%%%%%%%%%%%%%%% Método Montecarlo %%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Conceptos relacionados a las simulaciones computacionales}
+\label{sec:simulations}
+\subsection{El m\'etodo Montecarlo}
+
+Al considerar el c\'alculo de promedios t\'ermicos en mecánica estadística se deben realizar integrales o sumas sobre
+ una región del espacio de las fases.
+Suponiendo que se desea estudiar un sistema de $N$ partículas a una temperatura $T$ (se podrían especificar eventualmente presión y volumen),
+ describiendo cada partícula $i$ mediante un conjunto de variables $\{\alpha_i \}$ el conjunto $\{\{\alpha_1\},\{\alpha_2\},\dots,\{\alpha_N\}\}$
+ describe una configuración o punto $\mathbf{x}$ en el espacio de las fases. Si el sistema está descripto por un Hamiltoniano
+ $H_N(\mathbf{x})$, los valores medios de las funciones termodinámicas $B(\mathbf{x})$ vienen dados por:
+\\
+\begin{equation}
+\mean{B(\mathbf{x})}=\frac{\int_{\Omega}{d\mathbf{x}B(\mathbf{x})e^{-\beta H_N(\mathbf{x})}}}{\int_{\Omega}{d\mathbf{x}e^{-\beta H_N(\mathbf{x})}}}
+\label{vmB}
+\end{equation}
+ donde $\Omega$ es el volumen del espacio de las fases y $\beta=1/kT$, con $k$ la constante de Boltzmann. La resolución exacta de estas integrales es posible
+ en algunos casos sencillos, como el del modelo de Ising bidimensional, pero en general su resoluci\'on exacta es imposible
+ y deben utilizarse métodos aproximados o calculos numéricos para obtenerlas.\\
+El método MC permite obtener resultados numéricos discretizando el problema y, en lugar de sumar sobre todo el volumen del espacio de fases,
+ se toma una cantidad finita y reducida (M) de puntos.
+ El criterio más directo para determinar los puntos que formarán parte de la muestra es conocido como muestreo simple y consiste en elegir las configuraciones al azar,
+ de una distribuci\'on de probabilidad homog\'enea;
+ este método, sin embargo, no siempre es apropiado para evaluar integrales termodinámicas, ya que no tiene en cuenta las regiones del espacio de fases
+ donde la contribución del integrando es mayor. Es conveniente entonces elegir las cofiguraciones $x_{i}$ de la muestra estadística con una distribución
+ de probabilidad no uniforme. Una elección simple y natural para esta distribución es  $P_{eq}(x_{i})=\frac{e^{-\beta H_N(\mathbf{x}_i)}}{\sum_{n=1}^{M}{e^{-\beta H_N(\mathbf{x_{n}})}}}$,
+ con lo cual (\ref{vmB}) toma la forma del promedio aritmético entre los valores de la función $B$ en los diferentes puntos de la muestra:
+\\
+\begin{equation}
+\mean{B(\mathbf{x})}=\displaystyle\sum_{j=1}^{M}{B(\mathbf{x}_j)P(x_{j})}
+\label{vmB1}
+\end{equation}
+ donde $M$ es el número total de muestras.\\
+El método, introducido por Metrópolis \cite{metropolis} consiste en elegir las $M$ configuraciones como estados sucesivos pertenecientes a una cadena de Markov, donde cada
+ estado ${x_{i+1}}$ es construido a partir de un estado previo ${x_{i}}$ con una probabilidad de transición $W(x_{i} \rightarrow x_{i+1})$ convenientemente elegida
+ para que en el límite $M\rightarrow \infty$ la distribución de probabilidad tienda a la de equilibrio $P_{eq}$. Una condición suficiente para esto último es que se satisfaga
+ el principio de balance detallado:
+ \\
+\begin{equation}
+P_{eq}(x_{i})W(x_{i} \rightarrow x_{i'})=P_{eq}(x_{i'})W(x_{i'} \rightarrow x_{i})
+\label{baldet}
+\end{equation}
+\\
+
+ que implica que el cociente entre las probabilidad de una transición estados $(x_{i}\rightarrow x_{i'})$ y la transición inversa $(x_{i'}\rightarrow x_{i})$ depende solo
+ de la diferencia en la energía del sistema entre los dos estados $\Delta H_{N} = H(x_{i'})-H(x_{i})$,
+\\
+\begin{equation}
+\label{deltaH}
+\frac{W(x_{i} \rightarrow x_{i'})}{W(x_{i'} \rightarrow x_{i})}=\exp{(-\beta \Delta H_{N})}
+\end{equation}
+\\
+
+Una elección para $W$ que satisface las ecs. \ref{baldet} y \ref{deltaH} utilizada frecuentemente es la definida en la siguiente ecuación:
+\\
+\begin{equation}
+W_{x_{i} \rightarrow x_{i'}}= 
+\begin{cases}
+e^{-\beta \Delta H_N(\mathbf{x})} & \text{ si $\Delta H_N \geq 0$}\\
+1 &\text{si $\Delta H_N<0$}.
+\label{eq:prob_trans}
+\end{cases}
+\end{equation}
+
+
+Puede demostrarse \cite{binder_book2} que la distribución de probabilidad $P_{x_{i}}$ de una secuencia de estados $x_{i}\rightarrow x_{i'}\rightarrow x_{i''} \ldots${}
+ generada por esta probabilidad de transición converge a la distribución de probabilidad de equilibrio $P_{eq}(x)$.\\
+En una simulación Monte Carlo (MC) se estudia numéricamente la evolución temporal de un modelo cuyos cambios no se producen de una forma determinista,
+ sino estocástica, es decir que dependen de una secuencia de números aleatorios generados durante la simulación. Así al utilizar
+ una secuencia diferente de números aleatorios el resultado de la simulación no es idéntico, pero está de acuerdo con los resultados anteriores
+ dentro de algún error estadístico. En este trabajo llamaremos muestras independientes a los resultados obtenidos a partir de secuencias de números
+ aleatorios diferentes.\\
+La implementación del algoritmo de Metrópolis que hemos utilizado puede resumirse en los siguientes pasos:
+
+\begin{enumerate}
+\item Elegir una configuración inicial para el sistema, $\mathbf{x}_0$.
+\item Elegir un sitio $i$ al azar
+\item Calcular el cambio de energía $\Delta E$ involucrado en una transición de estado del spin en el sitio $i$. 
+\item Generar un número aleatorio $0<r<1$
+\item Si $r<e^{-\beta \Delta E}$, realizar la transición. Caso contrario, rechazarla.
+\item Volver al paso 2
+\end{enumerate}
+
+
+Estos pasos representan la evolución temporal del sistema utilizando la probabilidad de transición entre estados dada por la ec. \ref{eq:prob_trans}.
+Diremos que ha transcurrido una unidad de tiempo, a la que usualmente se llama 1 tiempo montecarlo (TMC), luego de haber intentado un número de transiciones igual
+ al número de spines que conforman el sistema. Así en una red cuadrada de lado $L$, un TMC equivale a repetir los pasos 1 a 6 un número de veces
+ igual a $L^{2}$.\\
+Al estudiar fenómenos en equilibrio termodinámico es necesario, antes de realizar medidas, hacer evolucionar al sistema desde el estado inicial a uno que esté
+ en equilibrio.\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Tamaño finito %%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Efectos de tamaño finito}
+\label{sec:tamfin}
+Dado que las simulaciones son llevadas a cabo sobre una red de tamaño finito, deben tenerse en cuenta los efectos que esto tiene sobre los datos
+ obtenidos mediante la simulación. Sin embargo, el tamaño finito también constituye una herramienta, es una variable más para controlar en el sistema
+ y estudiar como las cantidades termodinámicas dependen de ella. Los efectos de borde pueden reducirse mediante la imposición de condiciones de contorno periódicas.
+Por ejemplo el comportamiento de las magnitudes termodinámicas al atravesar una transición de fase es diferente al de las de un sistema infinito. La magnetización,
+ por ejemplo, en lugar de sufrir un quiebre abrupto en el punto crítico presenta un comportamiento suave y la susceptibilidad no diverge, sino que tiene
+ un pico en el valor crítico de la constante de acoplamiento. De la misma forma, el comportamiento de estas magnitudes como leyes de potencia en las cercanías
+ del punto crítico predicho por la teoría de escala se ve modificado y los exponentes críticos pueden presentar una dependecia con el tamaño del sistema.\\
+Según la teoría de escala de tamaño finito \cite{binder_book}, y como hemos visto en la sec. \ref{sec:teoria}, puede caracterizarse la transición a partir de magnitudes que dependen de los momentos
+ de la distribución de probabilidad de los parámetros de orden y la energía. Entre ellas se encuentran la susceptibilidad magnética $\chi$ y el cumulante
+ de cuarto orden $U_{4}$, que permiten estimar la ubicación del punto crítico del sistema infinito a partir de medidas para sistemas de tamaño finito
+ y pueden obtenerse a partir de los primeros momentos de la magnetización $\mean{m_{\alpha}}$ y $\mean{m_{\alpha}^{2}}$:
+\\
+\begin{equation}
+	\label{eq:suscept}
+	kT\chi_{\alpha} = L^{d}(\mean{m_{\alpha}^{2}}-\mean{m_{\alpha}}^{2}) \\
+\end{equation}
+\\
+\begin{equation}
+	U_{4}^{\alpha}=1-\frac{\mean{m_{\alpha}^{4}}}{3\mean{m_{\alpha}^{2}}},
+	\label{eq:cumul4}
+\end{equation}
+\\
+donde el subíndice $\alpha$ indica el spin, $m_{\alpha}$ es la magnetización, $L$ es el tamaño del sistema y $d$ su dimensión.\\
+A medida que el tamaño del sistema aumenta ($L\rightarrow\infty$) $U_{4}$ tiende a $0$ para $T\rightarrow 0$ y a $2/3$ para $T\rightarrow\infty$. Las gr\'aficas del cumulante
+ para diferentes tamaños del sistema, se intersectan en el valor crítico de la temperatura $T_{c}$, por lo tanto este puede determinarse aproximadamente graficando $U_{4}$ para diferentes
+ valores de $L$.\\

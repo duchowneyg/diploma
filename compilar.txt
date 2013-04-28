@@ -1,0 +1,7 @@
+Parece estar funcionando así:
+
+- compilar a dvi, latex diploma_XX.tex
+- ejecutar bibtex, bibtex diploma_XX
+- volver compilar a dvi, latex diploma_XX.tex, puede que sean varias veces para que las refs queden bien.
+- convertir a ps, dvips diploma_XX.dvi
+- convertir a pdf, ps2pdf diploma_XX.ps

@@ -1,0 +1,175 @@
+%%%%%%%%%%%%%%%%% Aspectos teóricos %%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Aspectos teóricos del comportamiento crítico}
+\label{sec:teoria}
+
+En esta sección haremos un breve resumen de deficiones y resultados derivados de diferentes teorías utilizadas en el análisis del comportamiento crítico de sistemas
+ termodinámicos.\\
+
+\subsection{Exponentes críticos y parámetros de orden}
+
+Los exponentes críticos describen el comportamiento de varias magnitudes termodinámicas medibles cerca del punto crítico, suponiendo que pueden descomponerse en
+ una parte regular que mantiene un valor finito y una parte singular que puede ser divergente o tener derivadas divergentes.\\
+Considerando el parámetro $t=\frac{T-T_{c}}{T_{c}}$ que mide la desviación de la temperatura respecto al valor crítico $T_{c}$,
+ se define el exponente crítico $\lambda$ asociado a la función $F(t)$, que describe el comportamiento de alguna magnitud
+ f\'isica de inter\'es en t\'erminos de variables termodin\'amicas:
+\\
+\begin{equation}
+	\lambda\equiv \lim_{t \to 0}\frac{\ln{F(t)}}{\ln{t}},
+	\label{eq:defexpcrit}
+\end{equation}
+\\
+ generalmente la relación entre $F(t)$ y $\lambda$ se denota como $F(t)\sim t^{\lambda}$.\\
+En el caso de un sistema magnético los exponentes críticos para la magnetización $M$, la susceptibilidad $\chi$, la capacidad calorífica $C$, la longitud de correlación
+ $\xi$ y la función de correlación $G(r)$ están definidos como:
+\\
+\begin{center} 
+\begin{eqnarray}
+	\label{eq:expcrit_mag}
+	M\sim \abs{t}^{\beta} \\
+	\label{eq:expcrit_susc}
+	\chi\sim \abs{t}^{-\gamma} \\
+	\label{eq:expcrit_cap}
+	C\sim \abs{t}^{-\alpha} \\
+	\label{eq:expcrit_longcorr}
+	\xi\sim \abs{t}^{-\nu} \\
+	\label{eq:expcrit_funccorr}
+	G(r)\sim \abs{t}^{-(d-2+\eta)}
+\end{eqnarray}
+\end{center}
+
+%\begin{center} 
+%\begin{eqnarray}
+%	\label{eq:op_Ms}
+%	\mean{\sigma}&=&\frac{1}{L^{2}}\sum_{ij}\sigma_{ij} \\
+%	\label{eq:op_Mt}
+%	\mean{\tau}&=&\frac{1}{L^{2}}\sum_{ij}\tau_{ij} \\
+%	\label{eq:op_Mst}
+%	\mean{\sigma\tau}&=&\frac{1}{L^{2}}\sum_{ij}\sigma_{ij}\tau_{ij} \\
+%	\label{eq:op_stagMs}
+%	\mean{\sigma}_{AF}&=&\frac{1}{L^{2}}\sum_{ij}(-1)^{(i+j)}\sigma_{ij} \\
+%	\label{eq:op_stagMt}
+%	\mean{\tau}_{AF}&=&\frac{1}{L^{2}}\sum_{ij}(-1)^{(i+j)}\tau_{ij} \\
+%	\label{eq:op_stagMst}
+%	\mean{\sigma\tau}_{AF}&=&\frac{1}{L^{2}}\sum_{ij}(-1)^{(i+j)}\sigma_{ij}\tau_{ij}
+%\end{eqnarray}
+%\end{center}
+
+Una transición de fase  del tipo orden-desorden puede ser cuantitativamente caracterizada por alguna cantidad que toma un valor nulo en la fase desordenada y un valor
+diferente de cero en la fase ordenada. Dicha propiedad es llamada parámetro de orden y su definición en términos de magnitudes físicas depende del sistema
+bajo estudio. Por ejemplo en el caso de un sistema magnético, la magnetización espontánea (el promedio de los momentos magnéticos de los elementos que componen
+ el sistema) es una medida del orden ferromagnético del sistema.\\
+A continuación se definen algunos parámetros que serán de utilidad en la descripción del modelo que estudiaremos:
+
+\begin{center} 
+\begin{eqnarray}
+	\label{eq:op_Ms}
+	\mean{\sigma}&=&\frac{1}{L^{2}}\sum_{ij}\sigma_{ij} \\
+	\label{eq:op_stagMs}
+	\mean{\sigma}_{AF}&=&\frac{1}{L^{2}}\sum_{ij}(-1)^{(i+j)}\sigma_{ij} \\
+\end{eqnarray}
+\end{center}
+
+El parámetro definido en la ec. (\ref{eq:op_Ms}) representa la magnetización media, medida del orden ferromagnético, de un sitema compuesto por spines $\sigma$,
+ toma valores no nulos cuando más de la mitad de los spines se encuentran alineados;
+ el definido por la ec. la ec. (\ref{eq:op_stagMs}) es una medida del orden de tipo antiferromagnético y su valor indica la proporción de
+ spines alineados de forma alternada. En general cuando alguno de estos parámetros es no nulo el sistema se encuentra en un estado ordenado.\\
+
+\subsection{Teoría de escala}
+\label{sec:teoria_escala}
+Según la hipótesis de escala \cite{fisher_scaling} la parte singular de la energía libre $f$ de un sistema es una función homogénea generalizada de los
+ parámetros que miden la desviación respecto al punto crítico (como $t$ o el parámetro $h=\frac{H-H_{c}}{H_{c}}$ para el campo magnético, con $H_{c}$ el valor crítico del campo magnético)
+ que, ante un cambio de escala en las variables $r\rightarrow r/b$, transforma como:
+\begin{equation}
+	\label{eq:sca_hyp}
+	f(t,h,\frac{1}{L})=b^{-d}f(b^{1/\nu}t,b^{d-x}h,\frac{b}{L})
+\end{equation}
+\\
+
+A partir de este comportamiento y las relaciones entre las magnitudes termodinámicas y las derivadas de $f$ pueden obtenerse relaciones entre los exponente críticos
+ definidos en las ecs. (\ref{eq:expcrit_mag}-\ref{eq:expcrit_funccorr}) haciendo uso de la arbitrariedad del parámetro $b$, así por ejemplo, la magnetización del
+ sistema $M=-\partial f/\partial h$ transforma como:
+
+\begin{equation}
+	\label{eq:sca_mag}
+	M(t,h,\frac{1}{L})=b^{-x}M(b^{1/\nu}t,b^{d-x}h,\frac{b}{L})
+\end{equation}
+\\
+En el límite $L\rightarrow \infty$, para $h=0$ y eligiendo $b=L$ se obtiene que:
+
+\begin{equation}
+	\label{eq:xdefinition}
+	M\sim L^{-x}
+\end{equation}
+\\
+Si en cambio se elige $b=t^{-\nu}$ resulta:
+
+\begin{equation}
+	\label{eq:sca_rel_1}
+	\beta =x\nu
+\end{equation}
+\\
+Utilizando estos mismos argumentos junto con las definiciones de $C=\partial^{2} f/\partial t^{2}$ y $\chi=\partial^{2} f/\partial h^{2}$
+ pueden obtenerse otras expresiones que relacionan los exponentes críticos:
+
+\begin{center} 
+\begin{eqnarray}
+	\label{eq:sca_rel_2}
+	d\nu =2\beta +\gamma \\
+	\label{eq:sca_rel_3}
+	2-\eta =\frac{\gamma}{\nu} \\
+	\label{eq:sca_rel_4}
+	\alpha = 2 - d\nu
+\end{eqnarray}
+\end{center}
+
+Cuando el sistema se encuentra limitado espacialmente por una superficie o un defecto (bordes, esquinas, líneas, etc.) debe tenerse en cuenta
+ una contribución local a la energía libre del sistema $f_{def}$ cuya parte singular presenta el mismo comportamiento que el dado en la ec. \ref{eq:sca_hyp}
+ para $f$, en el caso de un defecto con dimensión $d-1$:
+ 
+\begin{equation}
+	\label{eq:sca_def}
+	f_{def}(t,h_{def},\frac{1}{L})=b^{-(d-1)}f_{def}(b^{1/\nu}t,b^{d-x}h_{def},\frac{b}{L})
+\end{equation}
+\\
+ donde $h_{def}$ representa el campo magnético sobre la superficie o defecto.\\
+Repitiendo los argumentos utilizados anteriormente, las relaciones \ref{eq:xdefinition}-\ref{eq:sca_rel_1} se cumplen para
+ los correspondientes exponentes de superfice (defecto):
+ 
+\begin{equation}
+	\label{eq:sca_rel_surf}
+	M_{def}\sim L^{-x_{def}}, \beta_{def} =x_{def}\nu
+\end{equation}
+\\
+La funci\'on de correlaci\'on para un par de spines se obtiene como la derivada funcional de la energ\'ia libre respecto del campo magn\'etico 
+ $G(r,t)=\mean{\sigma(0)\sigma(r)}=\frac{\delta F}{\delta h(0) \delta h(r)}$ y por lo tanto su comportamiento ante una
+ transformaci\'on de escala viene dado por:
+ 
+\begin{equation}
+	\label{eq:sca_corr}
+	G(r, t)=b^{-2x}G(\frac{b}{r}, b^{1/\nu}t)
+\end{equation}
+\\
+ en las cercan\'ias del punto cr\'itico, $t\rightarrow 0$, y para una elecci\'on de $b=r$ las correlaciones decaen como
+ una ley de potencias:
+
+\begin{equation}
+	\label{eq:sca_corr_pot}
+	G(r, t=0)=\frac{G_{0}}{r^{2x}}
+\end{equation}
+\\
+En presencia de defectos, pueden analizarse las correlaciones entre spines pertenecientes al defecto, y las
+ correlaciones entre estos y los que no pertenecen al defecto.\\
+En el caso de un defecto en forma de l\'inea las primeras
+ son correlaciones a lo largo de la l\'inea, longitudinales, y las \'ultimas son perpendiculares al defecto. En ambos casos
+ el exponente de la funci\'on de correlaci\'on est\'a relacionado con el exponente cr\'itico $x_{def}$ de la magnetizaci\'on
+ del defecto definido en \ref{eq:sca_rel_surf}:
+
+\begin{equation}
+	\label{eq:sca_corr_pot_def}
+	G_{\parallel}(r, t=0)\sim{r^{-2x_{def}}}, \; \; \; \;  G_{\perp}(r, t=0)\sim{r^{-(x+x_{def})}}
+\end{equation}
+\\
+
+Estas expresiones nos permiten estudiar el comportamiento cr\'itico de la funci\'on de correlaci\'on a partir
+ de medidas realizadas para el exponente cr\'itico $x_{def}$ asociado a la magnetizaci\'on del defecto.\\

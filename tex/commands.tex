@@ -1,0 +1,13 @@
+\newcommand{\figwidth}{0.9\columnwidth}
+\newcommand{\mean}[1]{\ensuremath{\langle #1 \rangle}}
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+
+%% reset figure counters at the beginning of each chapter
+%\newcommand{\Section}[1]{\section{#1} \setcounter{figure}{1}}
+
+\renewcommand{\thefigure}{\arabic{figure}}
+
+% con esto evito que me muestre los numeros de chapter
+% ya que mi "book" tiene un solo chapter, sino me numeraria
+% todo 1.algo
+\renewcommand*\thesection{\arabic{section}}

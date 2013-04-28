@@ -1,0 +1,62 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: main.aux
+The style file: plain.bst
+Database file #1: phys.bib.bib
+I was expecting a `,' or a `}'---line 367 of file phys.bib.bib
+ :   pages = 1087
+ :               -1092
+I'm skipping whatever remains of this entry
+You're missing a field part---line 645 of file phys.bib.bib
+ :   journal = 
+ :             ,
+I'm skipping whatever remains of this entry
+Name 1 in "N. Metropolis, A.W. Rosenbluth, M.N. Rosenbluth, A.H. Teller, and E. Teller" has a comma at the end for entry metropolis
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "N. Metropolis, A.W. Rosenbluth, M.N. Rosenbluth, A.H. Teller, and E. Teller" for entry metropolis
+while executing---line 1049 of file plain.bst
+Name 1 in "N. Metropolis, A.W. Rosenbluth, M.N. Rosenbluth, A.H. Teller, and E. Teller" has a comma at the end for entry metropolis
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "N. Metropolis, A.W. Rosenbluth, M.N. Rosenbluth, A.H. Teller, and E. Teller" for entry metropolis
+while executing---line 1090 of file plain.bst
+You've used 20 entries,
+            2118 wiz_defined-function locations,
+            864 strings with 8981 characters,
+and the built_in function-call counts, 5633 in all, are:
+= -- 549
+> -- 212
+< -- 0
++ -- 85
+- -- 64
+* -- 351
+:= -- 984
+add.period$ -- 60
+call.type$ -- 20
+change.case$ -- 88
+chr.to.int$ -- 0
+cite$ -- 20
+duplicate$ -- 224
+empty$ -- 486
+format.name$ -- 64
+if$ -- 1175
+int.to.chr$ -- 0
+int.to.str$ -- 20
+missing$ -- 24
+newline$ -- 103
+num.names$ -- 40
+pop$ -- 76
+preamble$ -- 1
+purify$ -- 72
+quote$ -- 0
+skip$ -- 147
+stack$ -- 0
+substring$ -- 380
+swap$ -- 20
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 72
+warning$ -- 0
+while$ -- 56
+width$ -- 22
+write$ -- 218
+(There were 6 error messages)

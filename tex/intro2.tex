@@ -1,0 +1,36 @@
+%%%%%%%%%%%%%%%%%%%%%% Intro %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introducci\'on}
+\label{sec:intro}
+Los modelos bidimensionales han tenido un importante papel en la mec\'anica estad\'istica en relaci\'on al estudio de los
+ fen\'omenos cr\'iticos y las transiciones de fase. Entre los más estudiados se encuentran los que representan
+ varios tipos de spines dispuestos en una red vinculados por algún tipo de interacción, por ejemplo el modelo de Ising, Eigth-Vertex (8V)\cite{model_8V},
+ o Ashkin-Teller (AT)\cite{ashkin_teller_43}. Este tipo de modelos ha sido objeto de diversos estudios durante las últimas décadas,
+ algunos de ellos han sido resueltos exactamente a través de sofisticados métodos teóricos y estudiados mediante varios
+ métodos numéricos, por lo que existe abundante información sobre su comportamiento. Sin embargo, la posibilidad de obtener y estudiar en un laboratorio
+ materiales bidimensionales \cite{exp_ultrathin_magfilms} ha despertado interés en el estudio de nuevos problemas y nuevos escenarios,
+ entre ellos, la introducci\'on de interfaces y defectos topol\'ogicos en los modelos mencionados \cite{linear_defects2D, interf, interf_AT}
+ con el objetivo de describir tanto la presencia de impurezas en los materiales como las modificaciones realizadas a estos en diferentes procesos
+ de fabricaci\'on. Estos avances han conducido al descubrimiento de importantes modificaciones en el comportamiento cr\'itico de los sistemas.\\
+El modelo de Ashkin Teller, resulta de particular inter\'es debido a la riqueza de su comportamiento cr\'itico y su generalidad, ya que puede relacionarse con
+ varios modelos bidimensionales a trav\'es de transformaciones [buscar referencia mapping]. Puede ser considerado como dos sistemas de Ising[ref]
+ bidimensionales acoplados por una interacci\'on entre cuatro spines (2 de cada plano).\\
+
+El comportamiento crítico del modelo de Ashkin-Teller en dos dimensiones con un defecto en forma de línea ha sido estudiado
+ recientemente mediante diferentes m\'etodos, y en particular se han calculado sus exponentes críticos. Na\'on \cite{AT_naon} ha introducido un defecto asim\'etrico, mediante la modificaci\'on
+ de los acoplamientos en solo uno de los planos de spines, y estudiado el comportamiento de la funci\'on de correlaci\'on
+ spin-spin sobre la línea defectuosa mediante el método de integrales de camino en la descripción del modelo en términos de campos fermiónicos.
+ Lajk\'o e Igl\'oi \cite{AT_lajko}
+ han utilizando el método numérico del grupo de renormalización de la matriz densidad (DMRG) en la descripción del modelo en el límite Hamiltoniano,
+ que conduce a una representación cuántica en una red de dimensión menor a la del modelo clásico. Ambos trabajos se refieren al estudio de
+ la dependencia de los exponentes críticos del sistema con algunos parámetros del Hamiltoniano presentando discrepancias, en particular, en los resultados
+ obtenidos para el exponente crítico de la magnetización del defecto. Mientras que en la Ref. \cite{AT_naon} se encuentra que la interacci\'on entre ambos subsistemas tipo Ising
+ no afecta a los exponentes cr\'iticos, los resultados presentados en la Ref. \cite{AT_lajko} muestran una dependencia expl\'icita del exponente cr\'itico de la magnetizaci\'on
+ sobre el defecto con el acoplamiento entre ambos modelos de Ising. Estas discrepancias son una fuerte motivación para estudiar el sistema con defectos utilizando
+ un método diferente.\\ 
+En este trabajo estudiaremos el modelo de Ashkin Teller utilizando el método de simulaciones computacionales Montecarlo (MC), ampliamente utilizado
+ para el estudio de fenómenos críticos en sistemas bidimensionales, aplicado a la representación clásica del modelo utilizando dos sistemas bidimensionales de spines,
+ con interacci\'on a primeros vecinos (modelo de Ising) acoplados entre s\'i mediante una interacci\'on de cuatro spines. Comprobaremos el comportamiento general de nuestros
+ algoritmos determinando de manera cualitativs el diagrama de fases del modelo. Luego introduciremos un defecto asim\'etrico con forma de l\'inea y estudiaremos el comportamiento
+ cr\'itico del sistema con AT con defecto, poniendo inter\'es en particular en la determinaci\'on numérica de la dependencia del exponente crítico asociado a la magnetización
+ local del defecto con las constantes de acoplamiento.\\

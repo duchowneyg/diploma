@@ -1,0 +1,152 @@
+%\documentclass[a4paper,12pt]{report}
+%\documentclass[letter,12pt]{report}
+ \documentclass[a4paper,12pt]{book}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}\decimalpoint
+\usepackage{babel}
+\selectlanguage{spanish}
+%\usepackage{pdftricks}
+%\usepackage{epstopdf}
+%\usepackage{pst-pdf}
+% \usepackage{purifyeps}
+% \usepackage{pstoedit}
+% \usepackage{color}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{tocbibind}
+\RequirePackage[colorlinks=false,hyperindex]{hyperref}
+\usepackage{psfrag}
+\usepackage{pstricks}
+\usepackage{xcolor}
+%\usepackage{pst-grad}
+%\usepackage{pst-3d}
+%\usepackage{pst-3dplot}
+%\usepackage{pst-fr3d}
+%\usepackage{pst-gr3d}
+%\usepackage{pst-map3dII}
+%\usepackage{pst-vue3d}
+%\usepackage{fancybox}
+%\usepackage{pst-node}
+%\usepackage{pst-tree}
+%\usepackage[fixlanguage]{babelbib}
+\usepackage{setspace} 
+%\usepackage{float}
+\usepackage{amsmath,amsfonts,amssymb}
+%\usepackage{appendix}
+% \usepackage{chapterbib}
+%\usepackage{draftcopy}
+
+%\usepackage{type1cm,eso-pic,color}
+
+% \makeatletter
+% \AddToShipoutPicture{%
+% \setlength{\@tempdimb}{.5\paperwidth}%
+% \setlength{\@tempdimc}{.5\paperheight}%
+% \setlength{\unitlength}{1pt}%
+% \put(\strip@pt\@tempdimb,\strip@pt\@tempdimc){%
+% \makebox(0,0){\rotatebox{45}{\textcolor[gray]{0.95}%
+% {\fontsize{3cm}{3cm}\selectfont{PRELIMINAR}}}}%
+% \makebox(-100,-300){\rotatebox{45}{\textcolor[gray]{0.95}%
+% {\fontsize{2cm}{2cm}\selectfont{USO EXCLUSIVO DEL \\ CONICET}}}}
+% \makebox(-500,-0){\rotatebox{90}{\textcolor[gray]{0.95}%
+% {\fontsize{0.7cm}{0.7cm}\selectfont{\textcopyright Copyright 2011 - Demian Slobinsky}}}}
+% }%
+% }
+% \makeatother
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[ER]{}
+\fancyhead[OL]{}
+%\fancyfoot[LO,RE]{\thepage
+\input{tex/commands.tex}
+
+
+%\oddsidemargin 0.1in
+%\topmargin -0.4in
+%\textwidth 15truecm
+%\textheight 22truecm
+%\singlespacing
+%  \onehalfspacing 
+%  \doublespacing 
+%\pagenumbering{roman}
+%\pagestyle{headings}
+
+
+\makeindex
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% makes odd parity start page dissapear
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\let\cleardoublepage\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{tex/title.tex}
+
+\frontmatter
+
+%\input{declarations.tex}
+
+%\input{abstract.tex}
+
+%\input{acknowledgments.tex}
+\setcounter{chapter}{1}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{3}
+
+
+
+\tableofcontents
+
+
+\newpage
+
+\mainmatter
+%\chapter*{nada}
+
+\numberwithin{equation}{section}
+%\numberwithin{figure}{section}
+
+\input{tex/intro2.tex}
+\newpage
+
+\input{tex/teoria.tex}
+
+\input{tex/montecarlo.tex}
+
+\input{tex/AT_intro.tex}
+	\input{tex/AT_model.tex}
+
+	\input{tex/results_AT.tex}
+
+\input{tex/AT_line_intro.tex}
+	\input{tex/AT_line_model.tex}
+
+	\input{tex/results_AT_line.tex}
+
+\newpage
+
+\input{tex/conclu.tex}
+
+%\input{apendices.tex}
+
+% %  \bibliographystyle{plain}
+%   \bibliographystyle{ieeetr}
+%    \bibliography{biblio.bib}
+
+% 
+
+% \begin{thebibliography}{99}
+% \input{planbiblio.tex}
+% \end{thebibliography}
+\bibliographystyle{plain}
+\bibliography{phys.bib}
+
+\end{document}

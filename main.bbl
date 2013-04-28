@@ -1,0 +1,114 @@
+\begin{thebibliography}{10}
+
+\bibitem{ashkin_teller_43}
+J.~Ashkin and E.~Teller.
+\newblock Statistics of two-dimensional lattices with four components.
+\newblock {\em Phys. Rev.}, 64:178, 1943.
+
+\bibitem{AT_bariev_line}
+R.Z. Bariev.
+\newblock Influence of linear defects on the local magnetization of a plane
+  ising lattice.
+\newblock {\em Zh. {\'E}ksp. Teor. Fiz.}, 77:1217--1229, 1979.
+
+\bibitem{model_8V}
+R.~Baxter.
+\newblock Eight-vertex model in lattice statistics.
+\newblock {\em Phys. Rev. Lett.}, 26:832--833, 1971.
+
+\bibitem{baxter_book}
+R.J. Baxter.
+\newblock {\em Exactly Solved Models in Statistical Mechanics}.
+\newblock Academic Press, 1982.
+
+\bibitem{binder_book2}
+K.~Binder and D.W. Heermann.
+\newblock {\em Monte-Carlo simulations in statistical physics, an
+  introduction}.
+\newblock Springer, 2010.
+
+\bibitem{cardy_book}
+C.~Domb and J.~Lebowitz.
+\newblock {\em Phase transitions and critical phenomena}.
+\newblock Academic Press, 1987.
+
+\bibitem{AT_fan1972b}
+C.~Fan.
+\newblock On critical properties of the ashkin-teller model.
+\newblock {\em Phys. Lett.}, 39A:136--6, 1972.
+
+\bibitem{AT_fan1972a}
+C.~Fan.
+\newblock Symmetry properties of the ashkin-teller model and the eight-vertex
+  model.
+\newblock {\em Phys. Rev. B}, B6:902--10, 1972.
+
+\bibitem{fisher_scaling}
+Michael~E. Fisher and Michael~N. Barber.
+\newblock Scaling theory for finite-size effects in the critical region.
+\newblock {\em Phys. Rev. Lett.}, 28:1516--1519, 1972.
+
+\bibitem{interf}
+L.~Turban F.Á.~Bagaméry and F.~Iglói.
+\newblock Critical behavior at the interface between two systems belonging to
+  different universality classes.
+\newblock {\em Phys. Rev. B}, 73:144419, 2006.
+
+\bibitem{exp_ultrathin_magfilms}
+R.~D’Ortenzio K.~Fritsch and D.~Venus.
+\newblock Observation of mixed anisotropy in the critical susceptibility of an
+  ultrathin magnetic film.
+\newblock {\em arXiv:}, 1010.0657:0, 2010.
+
+\bibitem{AT8V_kadanoff_1977}
+J.P. Kadanoff.
+\newblock Connections between the critical behavior of the planar model and
+  that of the eight-vertex model.
+\newblock {\em Phys. Rev. Lett.}, 39:903--905, 1977.
+
+\bibitem{AT_lajko}
+P.~Lajkó and F.~Iglói.
+\newblock Numerical study of the critical behavior of the ashkin-teller model
+  at a line defect.
+\newblock {\em J. Stat. Mech.: Theor. Exp.}, 2011:P05025, 2011.
+
+\bibitem{binder_book}
+D.P. Landau and K.~Binder.
+\newblock {\em A guide to Monte-Carlo simulations in statistical physics}.
+\newblock Cambridge University Press, 2009.
+
+\bibitem{metropolis}
+M.N. Rosenbluth A.H.~Teller N.~Metropolis, A.W.~Rosenbluth and E.~Teller.
+\newblock Equations of state calculations by fast computing machines.
+\newblock {\em J. Chem. Phys.}, 21:1087, 1953.
+
+\bibitem{AT_naon}
+Carlos Naón.
+\newblock Critical behavior of the spin correlation function in the
+  ashkin-teller and baxter models with a line defect.
+\newblock {\em Phys. Rev. E}, 79:051112, 2009.
+
+\bibitem{linear_defects2D}
+M.P. Nightingale and H.W.J. Blöte.
+\newblock Linear defects in two dimensional systems: a finite-size
+  investigation.
+\newblock {\em J. Phys. A: Math. Gen.}, 15:L33--L38, 1982.
+
+\bibitem{interf_AT}
+L.~Turban P.~Lajkó and F.~Iglói.
+\newblock Scaling properties at the interface between different critical
+  subsystems: The ashkin-teller model.
+\newblock {\em Phys. Rev. B}, 76:224423, 2007.
+
+\bibitem{AT_3D_phdiag}
+G.S.~Grest R.V.~Ditzian, J.R.~Banavar and L.P. Kadanoff.
+\newblock Phase diagram for the ashkin-teller model in three dimensions.
+\newblock {\em Phys. Rev. B}, 22:2542--53, 1980.
+
+\bibitem{AT_wegner}
+F.J. Wegner.
+\newblock Duality relation between the ashkin-teller and the eight-vertex
+  model.
+\newblock {\em J. Phys. C: Solid State Phys.}, 5:L131, 1972.
+
+\end{thebibliography}
