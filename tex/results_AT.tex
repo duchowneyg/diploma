@@ -73,15 +73,15 @@ Hemos determinado el valor crítico de la constante de acoplamiento $K_{c}^{Isin
 
 
 \begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=1]{graf/phases/multi_snaps32_horiz.eps}
-\end{center}
-\caption{Snapshots del sistema en las diferentes fases. Cada columna corresponde a una región diferente del diagrama de fases.
- En la fila superior se representan los spines $\sigma$, en la central los $\tau$ y en la inferior el producto $\sigma\tau$.
- Estos gráficos se han realizado para un sistema de tamaño $32\times 32$. Para la primera columna se ha tomado $K=0.5$ y $K_{4}=0.5$,
-  es decir un estado del sistema correspondiente a la región I del diagramade fases. La segunda columna corresponde a la región II y se obtuvo con $K=0.2$ y $K_{4}=0$.
-  La tercera columna se obtiene para $K=0.1$ y $K_{4}=0.75$ y pertenece la fase III. La cuarta columna }
-\label{fig:snaps_multi}
+	\begin{center}
+		\includegraphics[scale=1]{graf/phases/multi_snaps32_horiz.eps}
+	\end{center}
+	\caption{Snapshots del sistema en las diferentes fases. Cada columna corresponde a una región diferente del diagrama de fases.
+	En la fila superior se representan los spines $\sigma$, en la central los $\tau$ y en la inferior el producto $\sigma\tau$.
+	Estos gráficos se han realizado para un sistema de tamaño $32\times 32$. Para la primera columna se ha tomado $K=0.5$ y $K_{4}=0.5$,
+	es decir un estado del sistema correspondiente a la región I del diagramade fases. La segunda columna corresponde a la región II y se obtuvo con $K=0.2$ y $K_{4}=0$.
+	La tercera columna se obtiene para $K=0.1$ y $K_{4}=0.75$ y pertenece la fase III. La cuarta columna }
+	\label{fig:snaps_multi}
 \end{figure} 
 
 \subsubsection{Diagrama de fases para el caso acoplado $K_{4}\neq 0$}
@@ -108,33 +108,42 @@ Por último, en la columna 5, se ha considerado el caso en que $K$ es negativo, 
  mientras que el producto $\sigma\tau$ permanece en un estado de orden ferromagnético. Este caso es representativo de la región V del diagrama de fases (Fig. \ref{fig:AT_ph_diag_Baxter}).\\
 
 \begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=0.8]{graf/phases/multi_AT_I_II_c.eps}
-\end{center}
-\caption{En el caso $K_{4}=0.25$ la transición entre las fases I y II, localizada sobre la curva E-F, es similar a la que ocurre en el modelo de Ising.
- El valor crítico de $K$ es menor a $K_{c}^{Ising}$.(a): magnetización ($|M|=\mean{\sigma}$), puede observarse la transici\'on de fase de segundo orden en $K\simeq 0.287(1)$,
- (b): la susceptibilidad magn\'etica presenta un pico abrupto en $K_{c}^{Ising}$ que se vuelve m\'as pronunciado a medida que
- aumenta el tamaño del sistema, deber\'ia transformarse en una divergencia para $L\rightarrow \infty$.(c): A partir
- del cumulante de cuarto orden es posible determinar el punto cr\'itico para un sistema finito, (d): La ubicaci\'on del
- punto cr\'itico se obtiene de la intersecci\'on entre los cumulantes para diferentes valores de $L$.}
-\label{fig:multi_AT_I_II_c}
+	\begin{center}
+		\includegraphics[scale=1]{graf/phases/new_phase_diag_back.eps}
+	\end{center}
+	\caption{Se presentan los puntos obtenidos en este trabajo para las transiciones de fase del modelo AT sobre el diagrama de fases publicado por Baxter\cite{baxter_book}.
+	En el caso de la transici\'on II$\rightarrow$IV, la curva es solo representativa, no se ha determiando su expresi\'on anal\'itica.}
+	\label{fig:phase_diag_back}
 \end{figure}
 
 \begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=0.8]{graf/phases/new_multi_AT_II_IV_b.eps}
-\end{center}
-\caption{La transición entre las fases II y IV, localizada sobre la línea E-E'
- puede estudiarse mediante el parámetro de orden $\mean{\sigma\tau}_{AF}$, utilizando un valor fijo de $K=0.377$.
- El comportamiento de las magnitudes $\abs{M}_{\sigma\tau}^{AF}$, $\chi_{\sigma\tau}^{AF}$ y $U_{4\sigma\tau}^{AF}$
- corresponde al de una transici\'on de fase de segundo orden.}
-%\caption{La transición entre las fases II y III, localizada sobre la línea F-F' puede estudiarse mediante el parámetro de orden $\mean{\sigma\tau}_{AF}$.
- %El punto B se encuentra en $K=0$, $K_{4}=K_{c}^{Ising}$.(a): magnetización ($|M|=\mean{\sigma}$), puede observarse la transici\'on de fase de segundo orden en $K\simeq 0.287(1)$,
- %(b): la susceptibilidad magn\'etica presenta un pico abrupto en $K_{c}^{Ising}$ que se vuelve m\'as pronunciado a medida que
- %aumenta el tamaño del sistema, deber\'ia transformarse en una divergencia para $L\rightarrow \infty$.(c): A partir
- %del cumulante de cuarto orden es posible determinar el punto cr\'itico para un sistema finito, (d): La ubicaci\'on del
- %punto cr\'itico se obtiene de la intersecci\'on entre los cumulantes para diferentes valores de $L$.}
-\label{fig:multi_AT_II_IV_b}
+	\begin{center}
+		\includegraphics[scale=0.8]{graf/phases/multi_AT_I_II_c.eps}
+	\end{center}
+	\caption{En el caso $K_{4}=0.25$ la transición entre las fases I y II, localizada sobre la curva E-F, es similar a la que ocurre en el modelo de Ising.
+	El valor crítico de $K$ es menor a $K_{c}^{Ising}$.(a): magnetización ($|M|=\mean{\sigma}$), puede observarse la transici\'on de fase de segundo orden en $K\simeq 0.287(1)$,
+	(b): la susceptibilidad magn\'etica presenta un pico abrupto en $K_{c}^{Ising}$ que se vuelve m\'as pronunciado a medida que
+	aumenta el tamaño del sistema, deber\'ia transformarse en una divergencia para $L\rightarrow \infty$.(c): A partir
+	del cumulante de cuarto orden es posible determinar el punto cr\'itico para un sistema finito, (d): La ubicaci\'on del
+	punto cr\'itico se obtiene de la intersecci\'on entre los cumulantes para diferentes valores de $L$.}
+	\label{fig:multi_AT_I_II_c}
+\end{figure}
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[scale=0.8]{graf/phases/new_multi_AT_II_IV_b.eps}
+	\end{center}
+	\caption{La transición entre las fases II y IV, localizada sobre la línea E-E'
+	puede estudiarse mediante el parámetro de orden $\mean{\sigma\tau}_{AF}$, utilizando un valor fijo de $K=0.377$.
+	El comportamiento de las magnitudes $\abs{M}_{\sigma\tau}^{AF}$, $\chi_{\sigma\tau}^{AF}$ y $U_{4\sigma\tau}^{AF}$
+	corresponde al de una transici\'on de fase de segundo orden.}
+	%\caption{La transición entre las fases II y III, localizada sobre la línea F-F' puede estudiarse mediante el parámetro de orden $\mean{\sigma\tau}_{AF}$.
+	%El punto B se encuentra en $K=0$, $K_{4}=K_{c}^{Ising}$.(a): magnetización ($|M|=\mean{\sigma}$), puede observarse la transici\'on de fase de segundo orden en $K\simeq 0.287(1)$,
+	%(b): la susceptibilidad magn\'etica presenta un pico abrupto en $K_{c}^{Ising}$ que se vuelve m\'as pronunciado a medida que
+	%aumenta el tamaño del sistema, deber\'ia transformarse en una divergencia para $L\rightarrow \infty$.(c): A partir
+	%del cumulante de cuarto orden es posible determinar el punto cr\'itico para un sistema finito, (d): La ubicaci\'on del
+	%punto cr\'itico se obtiene de la intersecci\'on entre los cumulantes para diferentes valores de $L$.}
+	\label{fig:multi_AT_II_IV_b}
 \end{figure}
 
 Mediante el mismo procedimiento que el utilizado en la transición de fase para $K_{4}=0$ % método del determinante de cuarto orden
@@ -161,19 +170,19 @@ Las figuras \ref{fig:multi_AT_I_II_c} y \ref{fig:multi_AT_II_IV_b} muestran el c
   y el cumulante de cuarto orden es el correspondiente a una transici\'on de fase de segundo orden.\\
  
 \begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=0.85]{graf/phases/phases_EF.eps}
-\end{center}
-\caption{Transiciones de fase sobre la línea E-F, definida por (\ref{eq:lincrit}), para diferentes valores de $K_{4}=-0.1, 0, 0.1, 0.25$. La curva con rayas
-corresponde al resultado analítico.}
-\label{fig:ph_EF}
+	\begin{center}
+		\includegraphics[scale=0.85]{graf/phases/phases_EF.eps}
+	\end{center}
+	\caption{Transiciones de fase sobre la línea E-F, definida por (\ref{eq:lincrit}), para diferentes valores de $K_{4}=-0.1, 0, 0.1, 0.25$. La curva con rayas
+	corresponde al resultado analítico.}
+	\label{fig:ph_EF}
 \end{figure}
  
 La forma de la curva que separa las fases I y II, incluyendo el caso $K_{4}=0$, (línea crítica E-F  de la Fig. \ref{fig:AT_ph_diag_Baxter}) es conocida con exactitud y
- está definida por la ec. \ref{eq:lincrit}. A fines de reproducir este resultado teórico utilizando nuestra implementación del modelo AT hemos determinado el valor crítico de $K$ para diferentes
+ está definida por la ec. (\ref{eq:lincrit}). A fines de reproducir este resultado teórico utilizando nuestra implementación del modelo AT hemos determinado el valor crítico de $K$ para diferentes
  valores de $K_{4}$ a partir de medidas de los parámetros de orden $\mean{\sigma}$ y $\mean{\tau}$ y sus momentos.
 En la figura \ref{fig:ph_EF} puede observarse el acuerdo entre los resultados obtenidos para $K$ utilizando diferentes valores de $K_{4}$ y la representación gráfica de la
- ec. \ref{eq:lincrit} en el plano $K - K_{4}$.\\
+ ec. (\ref{eq:lincrit}) en el plano $K - K_{4}$.\\
 
 En la transición entre las fases II y III el sistema pasa de una fase completamente desordenada a otra que exhibe orden parcial, los spines $\sigma$ y los $\tau$ se encuentran
  también desordenados, pero de forma tal que su producto presenta orden ferromagnético. Este orden puede detectarse a través del parámetro de orden $\mean{\sigma\tau}$,
@@ -195,14 +204,14 @@ Para valores negativos de $K$, los spines $\sigma$ tienden a alinearse antiferro
 ferromagnético para el producto $\sigma\tau$. Esto ocurre al atravesar la curva E'-F', que separa las regiones II y V en el diagrama de fases. Midiendo los parámetros de orden
  $\mean{\sigma}_{AF}$, $\mean{\tau}_{AF}$ y $\mean{\sigma\tau}$, obtuvimos algunos puntos sobre esta curva (Fig. \ref{fig:phase_diag_back}).\\
 
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=1]{graf/phases/new_phase_diag_back.eps}
-\end{center}
-\caption{Se presentan los puntos obtenidos en este trabajo para las transiciones de fase del modelo AT sobre el diagrama de fases publicado por Baxter\cite{baxter_book}.
- En el caso de la transici\'on II$\rightarrow$IV, la curva es solo representativa, no se ha determiando su expresi\'on anal\'itica.}
-\label{fig:phase_diag_back}
-\end{figure}
+%~ \begin{figure}[h!]
+	%~ \begin{center}
+		%~ \includegraphics[scale=1]{graf/phases/new_phase_diag_back.eps}
+	%~ \end{center}
+	%~ \caption{Se presentan los puntos obtenidos en este trabajo para las transiciones de fase del modelo AT sobre el diagrama de fases publicado por Baxter\cite{baxter_book}.
+	%~ En el caso de la transici\'on II$\rightarrow$IV, la curva es solo representativa, no se ha determiando su expresi\'on anal\'itica.}
+	%~ \label{fig:phase_diag_back}
+%~ \end{figure}
 
 Los resultados hallados para todas las transiciones de fase estudiadas concuerdan con el diagrama de fases de la Fig. \ref{fig:AT_ph_diag_Baxter},
  y pueden verse superpuestos a este en la Fig. \ref{fig:phase_diag_back}, los c\'irculos rojos corresponden a los resultados n\'umericos obtenidos

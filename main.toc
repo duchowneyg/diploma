@@ -1,0 +1,23 @@
+\select@language {spanish}
+\select@language {spanish}
+\contentsline {chapter}{\'Indice general}{\es@scroman {i}}{section*.2}
+\contentsline {section}{\numberline {1}Introducci\'on}{1}{section.1.1}
+\contentsline {section}{\numberline {2}Aspectos te\IeC {\'o}ricos del comportamiento cr\IeC {\'\i }tico}{3}{section.1.2}
+\contentsline {subsection}{\numberline {2.1}Exponentes cr\IeC {\'\i }ticos y par\IeC {\'a}metros de orden}{3}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {2.2}Teor\IeC {\'\i }a de escala}{4}{subsection.1.2.2}
+\contentsline {section}{\numberline {3}Conceptos relacionados a las simulaciones computacionales}{6}{section.1.3}
+\contentsline {subsection}{\numberline {3.1}El m\'etodo Montecarlo}{6}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {3.2}Efectos de tama\IeC {\~n}o finito}{9}{subsection.1.3.2}
+\contentsline {section}{\numberline {4}Modelo de Ashkin Teller.}{10}{section.1.4}
+\contentsline {subsection}{\numberline {4.1}Definici\IeC {\'o}n del modelo.}{10}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {4.2}Resultados}{13}{subsection.1.4.2}
+\contentsline {subsubsection}{Sistema desacoplado ($K_{4}=0$)}{15}{section*.3}
+\contentsline {subsubsection}{Diagrama de fases para el caso acoplado $K_{4}\not =0$}{16}{section*.4}
+\contentsline {section}{\numberline {5}Modelo AT con un defecto en forma de l\IeC {\'\i }nea.}{22}{section.1.5}
+\contentsline {subsection}{\numberline {5.1}Introducci\IeC {\'o}n de un defecto en el modelo AT.}{22}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {5.2}Resultados}{24}{subsection.1.5.2}
+\contentsline {subsubsection}{Sistema desacoplado: $\epsilon =0$}{24}{section*.5}
+\contentsline {subsubsection}{Acoplamiento positivo: $\epsilon >0$}{26}{section*.6}
+\contentsline {subsubsection}{Acoplamiento negativo: $\epsilon <0$}{32}{section*.7}
+\contentsline {section}{\numberline {6}Conclusiones}{34}{section.1.6}
+\contentsline {chapter}{Bibliograf\'{\i }a}{35}{section*.9}

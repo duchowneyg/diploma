@@ -10,14 +10,14 @@ Nuestro objetivo principal en el estudio del sistema AT con defecto es el de det
  y a partir de ellas determinado el comportamiento de $x_{m}$.\\
 
 Presentamos a continuación los resultados numéricos obtenidos en el estudio de la dependencia de
- $x_{m}^{\alpha}$ con la intensidad del defecto sobre la l\'inea E-F del diagrama de fases (Fig. \ref{fig:AT_ph_diag_Baxter}) definida por la ec. \ref{eq:lincrit}.
+ $x_{m}^{\alpha}$ con la intensidad del defecto sobre la l\'inea E-F del diagrama de fases (Fig. \ref{fig:AT_ph_diag_Baxter}) definida por la ec. (\ref{eq:lincrit}).
 Los puntos sobre la l\'inea E-F pueden clasificarse seg\'un el valor del par\'ametro $\epsilon=K_{4}/K$, que representa el acoplamiento
  entre los spines $\sigma$ y los $\tau$:
 $\epsilon<0$, los spines $\tau$ tienden a alinearse antiferromagnéticamente con los $\sigma$; $\epsilon=0$, no hay acoplamiento
  entre los $\tau$ y los $\sigma$; $\epsilon>0$, el acoplamiento es del tipo ferromagnético.
 Al extremo E de la l\'inea E-F le corresponde el valor $\epsilon = -1$ en el l\'imite $K\rightarrow \infty$ y al punto F el valor $\epsilon = 1$.
  Una vez elegido el valor del par\'ametro $\epsilon$
- para una medida, los valores de $K_{4}$ y $K$ se determinan a  partir de la ec. \ref{eq:lincrit} y la relaci\'on $\epsilon=K_{4}/K$.\\
+ para una medida, los valores de $K_{4}$ y $K$ se determinan a  partir de la ec. (\ref{eq:lincrit}) y la relaci\'on $\epsilon=K_{4}/K$.\\
 
 Debido al tamaño finito del sistema, el valor del exponente cr\'itico depende de $L$, y debe determinarse a partir de medidas de la magnetización para distintos tamaños,
  seg\'un la relación:
@@ -73,7 +73,7 @@ Cuando el acoplamiento entre los spines $\sigma$ y los $\tau$, $\epsilon$, es di
  no se comporta exactamente como una ley de potencias, es decir que los exponentes $x_{m}^{\sigma}$ y $x_{m}^{\tau}$ dependen del
  tamaño del sistema $L$. Hemos realizado medidas de la magnetizaci\'on sobre el defecto $m_{l}$ a fines de determinar la dependencia del
  exponente cr\'itico con el par\'ametro $\epsilon$. Todas estas medidas corresponden a puntos sobre la curva cr\'itica E-F
- en el plano ($K$, $K_{4}$), de forma que para una dado valor de $\epsilon$, $K$ y $K_{4}$ deben satisfacer la ec. \ref{eq:lincrit}.
+ en el plano ($K$, $K_{4}$), de forma que para una dado valor de $\epsilon$, $K$ y $K_{4}$ deben satisfacer la ec. (\ref{eq:lincrit}).
  En la Fig. \ref{fig:desv} se observa la magnetización del defecto en función de $L$ (en escala logar\'itmica) para los casos
  $\epsilon=0$ y $\epsilon=0.75$, en el segundo caso puede apreciarse claramente una desviación respecto al comportamiento de una ley de potencias.
 
@@ -105,7 +105,7 @@ Hemos considerado tres valores positivos diferentes de $\epsilon$, para cada uno
  
 \begin{equation}
 	\label{eq:logmagvsL}
-	\ln{(m_{l}^{\alpha}(L))} \sim -x_{m}^{\alpha}\Ln{(L)}, \; \; \; \; \alpha=\sigma , \tau .
+	\ln{(m_{l}^{\alpha}(L))} \sim -x_{m}^{\alpha}\ln{(L)}, \; \; \; \; \alpha=\sigma , \tau .
 \end{equation}
  
 \begin{figure}[h!]
@@ -166,25 +166,30 @@ Para valores negativos de $K_{l}$, los exponentes cr\'iticos son mayores que par
  valor absoluto de $K_{l}$ crece.\\
  
 \begin{figure}[htbp!]
-\begin{center}
-\includegraphics[width=\figwidth]{graf/exp/mag_exp_e0.75_Jln0.35.eps}
-\end{center}
-\caption{(a) Magnetizaci\'on sobre el defecto en funci\'on de la inversa del tamaño del sistema, $\frac{1}{L}$ para
- $\epsilon=0.75$ y $K_{l}=-0.35$, la l\'inea punteada muestra el ajuste de un polinomio de grado $2$, (b) valor efectivo
-  del exponente cr\'itico de la magnetizaci\'on obtenido utilizando la ec.(\ref{eq:exp_eff})
- para los puntos de la gr\'afica (a) tomados de a pares.}
-\label{fig:xfits}
+	
+	\begin{center}
+		\includegraphics[width=\figwidth]{graf/exp/mag_exp_e0.75_Jln0.35.eps}
+	\end{center}
+	
+	\caption{(a) Magnetizaci\'on sobre el defecto en funci\'on de la inversa del tamaño del sistema, $\frac{1}{L}$ para
+	$\epsilon=0.75$ y $K_{l}=-0.35$, la l\'inea punteada muestra el ajuste de un polinomio de grado $2$, (b) valor efectivo
+	del exponente cr\'itico de la magnetizaci\'on obtenido utilizando la ec.(\ref{eq:exp_eff})
+	para los puntos de la gr\'afica (a) tomados de a pares.}
+	
+	\label{fig:xfits}
+	
 \end{figure}
 
 \begin{figure}[h!]
-\begin{center}
-\includegraphics[width=\figwidth]{graf/exp/exp_all_01.eps}
-\end{center}
-\caption{Exponente crítico de la magnetización del defecto, en función de la intensidad $K_{l}$. Se muestran los resultados para $\epsilon=0.25,0.5,0.75$.
-Los puntos del gráfico representados por símbolos sin relleno $\vartriangle$, $\circ$ y $\square$ corresponden a los spines $\sigma$, mientras que los 
-representados por símbolos rellenos, $\blacktriangle$, $\bullet$ y $\blacksquare$, corresponden a los spines $\tau$. La línea horizontal punteada
-indica el valor $\frac{1}{8}$, valor teórico del exponente para $K_{l}=0$.}
-\label{fig:exps_st_all}
+	\begin{center}
+		\includegraphics[width=\figwidth]{graf/exp/exp_all_01.eps}
+	\end{center}
+	
+	\caption{Exponente crítico de la magnetización del defecto, en función de la intensidad $K_{l}$. Se muestran los resultados para $\epsilon=0.25,0.5,0.75$.
+	Los puntos del gráfico representados por símbolos sin relleno $\vartriangle$, $\circ$ y $\square$ corresponden a los spines $\sigma$, mientras que los 
+	representados por símbolos rellenos, $\blacktriangle$, $\bullet$ y $\blacksquare$, corresponden a los spines $\tau$. La línea horizontal punteada
+	indica el valor $\frac{1}{8}$, valor teórico del exponente para $K_{l}=0$.}
+	\label{fig:exps_st_all}
 \end{figure}
 
 El hecho de que el valor del exponente se aproxime a cero cuando la intensidad del defecto es grande y positiva, puede ser analizado

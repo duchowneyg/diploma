@@ -3,25 +3,42 @@
 \section{Aspectos teóricos del comportamiento crítico}
 \label{sec:teoria}
 
-En esta sección haremos un breve resumen de deficiones y resultados derivados de diferentes teorías utilizadas en el análisis del comportamiento crítico de sistemas
- termodinámicos.\\
+En esta sección haremos un breve resumen de deficiones y resultados derivados de
+ diferentes teorías utilizadas en el análisis del comportamiento crítico de
+ sistemas termodinámicos.
 
 \subsection{Exponentes críticos y parámetros de orden}
 
-Los exponentes críticos describen el comportamiento de varias magnitudes termodinámicas medibles cerca del punto crítico, suponiendo que pueden descomponerse en
- una parte regular que mantiene un valor finito y una parte singular que puede ser divergente o tener derivadas divergentes.\\
-Considerando el parámetro $t=\frac{T-T_{c}}{T_{c}}$ que mide la desviación de la temperatura respecto al valor crítico $T_{c}$,
- se define el exponente crítico $\lambda$ asociado a la función $F(t)$, que describe el comportamiento de alguna magnitud
- f\'isica de inter\'es en t\'erminos de variables termodin\'amicas:
+El término fenómenos críticos se refiere a las propiedades termodinámicas de
+sistemas físicos cerca de la temperatura crítica $T_{c}$ de una transición de
+fase. Los exponentes críticos describen el comportamiento de magnitudes
+ termodinámicas medibles cerca del punto crítico, suponiendo que pueden
+ descomponerse en una parte regular que mantiene un valor finito y una parte
+ singular que puede ser divergente o tener derivadas divergentes.\\
+
+Si una magnitud física de interés puede ser descripta por una función $F(T, V, P)$
+ de las variables que definen el estado termodinámico de un sistema, y
+ consideramos el parámetro $t=\frac{T-T_{c}}{T_{c}}$ que mide la desviación de
+ la temperatura respecto al valor crítico $T_{c}$, el exponente crítico $\lambda${}
+ asociado a $F(t)$ está definido por la relación:
 \\
 \begin{equation}
 	\lambda\equiv \lim_{t \to 0}\frac{\ln{F(t)}}{\ln{t}},
 	\label{eq:defexpcrit}
 \end{equation}
+ que implica que la magnitud descripta por $F$ se comporta como una ley de
+ potencias en la región crítica:
+\begin{equation}
+	F(t)\sim t^{\lambda}
+	\label{eq:leypot}
+\end{equation}
 \\
- generalmente la relación entre $F(t)$ y $\lambda$ se denota como $F(t)\sim t^{\lambda}$.\\
-En el caso de un sistema magnético los exponentes críticos para la magnetización $M$, la susceptibilidad $\chi$, la capacidad calorífica $C$, la longitud de correlación
- $\xi$ y la función de correlación $G(r)$ están definidos como:
+El sistema bajo estudio en este trabajo puede expresarse en los mismos términos
+ que el modelo de Ising bidimensional (diremos más sobre esto en las siguientes
+ secciones), por ello las magnitudes físicas que consideraremos en su estudio
+ son las utilizadas en el caso de los sistemas magnéticos o sistemas formados por spines,
+ la magnetización $M$, la susceptibilidad $\chi$ y la capacidad calorífica $C$. Los exponentes
+ críticos asociados están definidos según las siguientes relaciones:
 \\
 \begin{center} 
 \begin{eqnarray}
@@ -31,13 +48,38 @@ En el caso de un sistema magnético los exponentes críticos para la magnetizaci
 	\chi\sim \abs{t}^{-\gamma} \\
 	\label{eq:expcrit_cap}
 	C\sim \abs{t}^{-\alpha} \\
-	\label{eq:expcrit_longcorr}
-	\xi\sim \abs{t}^{-\nu} \\
-	\label{eq:expcrit_funccorr}
-	G(r)\sim \abs{t}^{-(d-2+\eta)}
 \end{eqnarray}
 \end{center}
+Otra magnitud importante en el estudio de sistemas compuestos por spines es la
+ función de correlación $G(r, r')$, que mide la probabilidad de que los spines en las
+  posiciones $r$ y $r'$ se encuentren en el mismo estado y representa por lo tanto
+  una medida del orden espacial del sistema. La función de correlación para un sistema
+  compuesto por spines $\sigma$ en una red bidimensional está dada por:
 
+\begin{equation}
+	G(ij, km) = \mean{(\sigma_{ij}-\mean{\sigma_{ij}})(\sigma_{km}-\mean{\sigma_{km}})} 
+	\label{eq:2dcorrfunct}
+\end{equation}
+donde los subíndinces $ij$ y $km$ denotan la posición de los spines en la red bidimensional.
+Su comportamiento cerca del punto crítico puede ser descripto en forma de ley de potencias,
+ introduciendo la cantidad $xi$, llamada longitud de correlación, y el exponente crítico $p$:
+\begin{center} 
+	\begin{eqnarray}
+		\label{eq:expcrit_funccorr}
+		G(r) = r^{-p}e^{\frac{-r}{\eta}}\\
+		%G(r)\sim r^{-(d-2+\eta)}
+		\label{eq:expcrit_longcorr}
+		\xi\sim \abs{t}^{-\nu}
+	\end{eqnarray}
+\end{center}
+donde $p=d-2+\eta$ es el exponente crítico asociado a la función de correlación y
+$\nu$ el asociado a la longitud de correlación. Dado que esta última magnitud
+diverge en el punto crítico, la expresión para $G(r)$ cuando $t\rightarrow 0$
+resulta:
+\begin{equation}
+	G(r)\sim r^{-(d-2+\eta)}
+	\label{eq:corrfunct}
+\end{equation}
 %\begin{center} 
 %\begin{eqnarray}
 %	\label{eq:op_Ms}
@@ -55,11 +97,18 @@ En el caso de un sistema magnético los exponentes críticos para la magnetizaci
 %\end{eqnarray}
 %\end{center}
 
-Una transición de fase  del tipo orden-desorden puede ser cuantitativamente caracterizada por alguna cantidad que toma un valor nulo en la fase desordenada y un valor
-diferente de cero en la fase ordenada. Dicha propiedad es llamada parámetro de orden y su definición en términos de magnitudes físicas depende del sistema
-bajo estudio. Por ejemplo en el caso de un sistema magnético, la magnetización espontánea (el promedio de los momentos magnéticos de los elementos que componen
- el sistema) es una medida del orden ferromagnético del sistema.\\
-A continuación se definen algunos parámetros que serán de utilidad en la descripción del modelo que estudiaremos:
+Una transición de fase  del tipo orden-desorden puede caracterizarse cuantitativamente
+ por alguna cantidad, usualmente una variable termodinámica medible, que toma un valor
+ nulo en la fase desordenada y un valor diferente de cero en la fase ordenada.
+ Dicha cantidad es llamada parámetro de orden y su definición, en términos de
+ magnitudes físicas, depende del sistema bajo estudio. Por ejemplo en el caso
+ de un sistema magnético, la magnetización espontánea $M$ (el promedio de los momentos magnéticos de los
+ elementos que componen el sistema) es una medida del orden ferromagnético del
+ sistema.\\
+El modelo que estudiaremos en este trabajo describe un sistema conformado por spines
+ que pueden tomar dos valores posibles ubicados en una red bidimensional cuadrada.
+Definimos aquí los parámetros que nos servirán para caraterizar los diferentes
+ estados de orden en el sistema:
 
 \begin{center} 
 \begin{eqnarray}
@@ -69,16 +118,19 @@ A continuación se definen algunos parámetros que serán de utilidad en la desc
 	\mean{\sigma}_{AF}&=&\frac{1}{L^{2}}\sum_{ij}(-1)^{(i+j)}\sigma_{ij} \\
 \end{eqnarray}
 \end{center}
-
-El parámetro definido en la ec. (\ref{eq:op_Ms}) representa la magnetización media, medida del orden ferromagnético, de un sitema compuesto por spines $\sigma$,
- toma valores no nulos cuando más de la mitad de los spines se encuentran alineados;
- el definido por la ec. la ec. (\ref{eq:op_stagMs}) es una medida del orden de tipo antiferromagnético y su valor indica la proporción de
+el subíndice $ij$ en estas ecuaciones indica la posición del spin $\sigma$ en una red bidimensional cuadrada de lado $L$.
+El parámetro definido en la ec. (\ref{eq:op_Ms}) representa la magnetización media, medida del orden ferromagnético, de un sistema compuesto por spines $\sigma$,
+ toma valores no nulos cuando más de la mitad de los spines se encuentran alineados.
+ El definido por la ec. (\ref{eq:op_stagMs}) es una medida del orden de tipo antiferromagnético y su valor indica la proporción de
  spines alineados de forma alternada. En general cuando alguno de estos parámetros es no nulo el sistema se encuentra en un estado ordenado.\\
 
 \subsection{Teoría de escala}
 \label{sec:teoria_escala}
-Según la hipótesis de escala \cite{fisher_scaling} la parte singular de la energía libre $f$ de un sistema es una función homogénea generalizada de los
- parámetros que miden la desviación respecto al punto crítico (como $t$ o el parámetro $h=\frac{H-H_{c}}{H_{c}}$ para el campo magnético, con $H_{c}$ el valor crítico del campo magnético)
+Según la hipótesis de escala \cite{fisher_scaling} la parte singular de la
+ energía libre $f$ de un sistema es una función homogénea generalizada de los
+ parámetros que miden la desviación respecto al punto crítico (como el parámetro $t$
+ definido en la sección anterior o $h=\frac{H-H_{c}}{H_{c}}$ definido de manera 
+ equivalente para el campo magnético, con $H_{c}$ el valor crítico del campo magnético)
  que, ante un cambio de escala en las variables $r\rightarrow r/b$, transforma como:
 \begin{equation}
 	\label{eq:sca_hyp}
@@ -86,8 +138,10 @@ Según la hipótesis de escala \cite{fisher_scaling} la parte singular de la ene
 \end{equation}
 \\
 
-A partir de este comportamiento y las relaciones entre las magnitudes termodinámicas y las derivadas de $f$ pueden obtenerse relaciones entre los exponente críticos
- definidos en las ecs. (\ref{eq:expcrit_mag}-\ref{eq:expcrit_funccorr}) haciendo uso de la arbitrariedad del parámetro $b$, así por ejemplo, la magnetización del
+A partir de este comportamiento y las relaciones entre las magnitudes termodinámicas
+ y las derivadas de $f$ pueden obtenerse relaciones entre los exponentes críticos
+ definidos en las ecs. (\ref{eq:expcrit_mag}-\ref{eq:expcrit_funccorr}).
+ Por ejemplo la magnetización del
  sistema $M=-\partial f/\partial h$ transforma como:
 
 \begin{equation}
@@ -95,22 +149,31 @@ A partir de este comportamiento y las relaciones entre las magnitudes termodiná
 	M(t,h,\frac{1}{L})=b^{-x}M(b^{1/\nu}t,b^{d-x}h,\frac{b}{L})
 \end{equation}
 \\
-En el límite $L\rightarrow \infty$, para $h=0$ y eligiendo $b=L$ se obtiene que:
+Haciendo uso de la arbitrariedad del parámetro $b$, que define a la transformación
+de escala, y considerando el límite $L\rightarrow \infty$, para $h=0$, puede elegirse
+ $b=L$ obteniéndose:
 
+%\begin{center} 
+%	\begin{eqnarray}
 \begin{equation}
-	\label{eq:xdefinition}
-	M\sim L^{-x}
+		\label{eq:xdefinition}
+		M\sim L^{-x}
 \end{equation}
-\\
+%	\end{eqnarray}
+%\end{center}
+que relaciona la magnetización del sistema con el tamaño del mismo a través de
+ una ley de potencias en las cercanías del punto crítico.
 Si en cambio se elige $b=t^{-\nu}$ resulta:
 
 \begin{equation}
 	\label{eq:sca_rel_1}
 	\beta =x\nu
 \end{equation}
-\\
-Utilizando estos mismos argumentos junto con las definiciones de $C=\partial^{2} f/\partial t^{2}$ y $\chi=\partial^{2} f/\partial h^{2}$
- pueden obtenerse otras expresiones que relacionan los exponentes críticos:
+ una relación entre algunos delos exponentes críticos del sistema.\\
+Utilizando estos mismos argumentos junto con las definiciones de la capacidad
+calorífica $C=\partial^{2} f/\partial t^{2}$ y la susceptibilidad
+ $\chi=\partial^{2} f/\partial h^{2}$ pueden obtenerse otras relaciones entre
+ los exponentes críticos:
 
 \begin{center} 
 \begin{eqnarray}
@@ -123,9 +186,14 @@ Utilizando estos mismos argumentos junto con las definiciones de $C=\partial^{2}
 \end{eqnarray}
 \end{center}
 
-Cuando el sistema se encuentra limitado espacialmente por una superficie o un defecto (bordes, esquinas, líneas, etc.) debe tenerse en cuenta
- una contribución local a la energía libre del sistema $f_{def}$ cuya parte singular presenta el mismo comportamiento que el dado en la ec. \ref{eq:sca_hyp}
- para $f$, en el caso de un defecto con dimensión $d-1$:
+Cuando se desea describir un sistema espacialmente acotado, como la presencia de
+ un borde, un defecto o la unión entre dos materiales diferentes, el modelo que
+ describe el sistema se debe tenerse en cuenta, en las zonas en las que el sistema
+ no presenta homogeneidad espacial, la contribución local a la energía libre.
+ Suponiendo que la parte singular de la energía libre asociada a esta contribución
+ $f_{def}$ presenta el mismo comportamiento que el dado en la ec. (\ref{eq:sca_hyp})
+ para $f$ y considerando el caso de un defecto con dimensión $d-1$, por ejemplo
+ una superficie en un sistema tridimensional o un defecto lineal en uno bidimensional:
  
 \begin{equation}
 	\label{eq:sca_def}
@@ -142,8 +210,8 @@ Repitiendo los argumentos utilizados anteriormente, las relaciones \ref{eq:xdefi
 \end{equation}
 \\
 La funci\'on de correlaci\'on para un par de spines se obtiene como la derivada funcional de la energ\'ia libre respecto del campo magn\'etico 
- $G(r,t)=\mean{\sigma(0)\sigma(r)}=\frac{\delta F}{\delta h(0) \delta h(r)}$ y por lo tanto su comportamiento ante una
- transformaci\'on de escala viene dado por:
+ $G(r,t)=\mean{\sigma(0)\sigma(r)}=\frac{\delta F}{\delta h(0) \delta h(r)}$ y por lo tanto su comportamiento ante la
+ transformaci\'on de escala $r\rightarrow r/b$ viene dado por:
  
 \begin{equation}
 	\label{eq:sca_corr}
